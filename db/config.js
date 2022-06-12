@@ -12,6 +12,6 @@ pool.getConnection((err) => {
     err ? console.warn("No conectado", { "Error": err.message }) : console.dir("Conexión establecida...")
 })
 
-pool.query = util.promisify(connection.query)
+pool.query = util.promisify(pool.query)
 
 module.exports = pool
